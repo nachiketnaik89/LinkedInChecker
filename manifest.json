@@ -1,0 +1,23 @@
+{
+  "manifest_version":2,
+  "name":"LinkedIn Marker",
+  "description":"trakcs Applied jobs and not intersted jobs",
+  "version":"1.0",
+
+  "browser_action":{
+    "dafault_icon":"icon.png",
+    "default_popup":"popup.html"
+  },
+  "content_scripts":[
+    {
+      "matches":["https://www.linkedin.com/job/*","https://www.linkedin.com/jobs/*","https://www.linkedin.com/jobs2/*"],
+      "js":["main.js","jquery-1.12.0.min.js"]
+    }
+  ],
+  "permissions":[
+    "storage",
+    "tabs",
+    "https://www.linkedin.com/*"
+  ]
+
+}
